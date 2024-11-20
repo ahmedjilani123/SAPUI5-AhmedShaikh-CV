@@ -13,10 +13,10 @@
             <MessageStrip id="MessageStripID"
 				text="We’re happy to have you here! Take a moment to read through the profile and explore the projects. Your feedback is always appreciated!"
 				type="Success"
-                
 				showIcon="true"
                 customIcon="sap-icon://person-placeholder"
-				showCloseButton="true"
+				showCloseButton="true" 
+                close="HandleCloseFeedBackPress"
 			/>
            
              <f:FlexibleColumnLayout id="flexID" layout="{ColumnLayout>/FLayout}" >

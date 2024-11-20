@@ -39,7 +39,7 @@
                                 fitContainer="true"
                                 alignItems="Center"
                             >
-                                <Avatar
+                                <Avatar 
                                     src="../Images/profile.jpg"
                                     class="sapUiTinyMarginEnd"
                                 />
@@ -65,17 +65,15 @@
                         <obj:actions>
                             <Button
                                 type="Emphasized"
-                                
+                                 fieldGroupIds="LinkedIn" 
                                 icon="../Images/linkedin2.png"
-                                press="toggleFooter"
+                                press="OpenLinkbuttonPress"
                             />
                              <Button
-                                type="Accept"
-                                ariaLabelledBy="GitHub"
-                                ariaHasPopup="Dialog"
-                                ariaDescribedBy="GitHub"
+                                type="Accept" fieldGroupIds="GitHub" 
+                               
                                 icon="../Images/github126.png"
-                                press="toggleFooter"
+                                press="OpenLinkbuttonPress"
                             />
                             <Button
                                 type="Success"
@@ -368,9 +366,9 @@ By combining these controls and features, the application delivers actionable in
                    	<ObjectNumber
 				class="sapUiTinyMarginEnd"
 		
-				number="{TaskModel>Title/Status/State}"
+				number="{TaskModel>Status/State}"
 				unit=""
-				state="Success" />
+				state="{path: 'TaskModel>Status/State', formatter: '.formatState'}" />
                 </HBox>
             </Toolbar>
         </headerToolbar>
@@ -449,6 +447,7 @@ By combining these controls and features, the application delivers actionable in
                     </obj:ObjectPageSubSection>
                     </obj:subSections>
                     </obj:ObjectPageSection>
+                 
                 </obj:sections>
             </obj:ObjectPageLayout>
 

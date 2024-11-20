@@ -85,6 +85,9 @@
       },
       "sideTaskModel":{
  "type": "sap.ui.model.json.JSONModel"
+      },
+      "FeedbackModel": {
+         "type": "sap.ui.model.json.JSONModel"
       }
     },
     "resources": {

@@ -24,7 +24,7 @@
         <obj:expandedHeading>
             <VBox>
                 <Title
-                    text="{sidesideTaskModel>/Title}"
+                    text="{sideTaskModel>/Title}"
                     level="H1"
                     wrapping="true"
                     class="sapUiSmallMarginBottom" />

@@ -6,7 +6,7 @@
         "Description": "SalesOrder is an SAP Fiori/UI5 app that streamlines order management with an intuitive interface for creating, monitoring, and managing sales orders, optimizing sales operations.",
         "Status": {
             "State": "Complete",
-            "LastUpdated": "20 Nov 2024"
+            "LastUpdated": "2024"
         },
         "Technology": ["JavaScript", "SAPUI5", "OData", "HTML", "CSS", "JSON", "SAP BTP","XML"],
         "Tabs": [
@@ -91,8 +91,8 @@
         "Url": "https://customfiorilaunchpad.netlify.app/",
         "Description": "Custom Fiori Launchpad is a tailored SAP Fiori/UI5 application that serves as a central hub for managing various custom applications, enabling efficient SAP workflow customization.",
         "Status": {
-            "State": "Complete",
-            "LastUpdated": "20 Nov 2024"
+            "State": "In Progress",
+            "LastUpdated": "2024"
         },
         "Technology": ["JavaScript", "SAPUI5", "OData", "HTML", "CSS", "JSON", "SAP BTP", "XML"],
         "Tabs": [
@@ -170,6 +170,264 @@
                 }
             }
         ]
+    },
+    {
+        "Title": "Vendor Onboarding",
+        "Image": "../Images/VendorPortal.png",
+        "Url": "https://vendor-onboarding.netlify.app/",
+        "Description": "Vendor Onboarding is an SAP Fiori/UI5 application that streamlines the vendor onboarding process, enabling departments to approve, reject, or re-route vendor/client data.",
+        "Status": {
+            "State": "Complete",
+            "LastUpdated": "2023"
+        },
+        "Technology": ["JavaScript", "SAPUI5", "OData", "HTML", "CSS", "JSON", "SAP BTP", "XML","NodeJS"],
+        "Tabs": [
+            {
+                "Key": "information",
+                "icon": "sap-icon://hint",
+                "Title": "Information",
+                "Content": {
+                    "Title": "Application Information",
+                    "ApplicationOverview": "Application Overview",
+                    "Describe": "Vendor Onboarding simplifies the process of submitting, reviewing, and approving vendor and client data, enabling collaboration between departments to ensure data accuracy.",
+                    "CoreData": [
+                        "SAPUI5 for building the user interface.",
+                        "OData services for backend communication.",
+                        "SAP BTP for cloud deployment and integration.",
+                        "SQLite for local database management.",
+                        "JSON services for demo configurations."
+                    ]
+                }
+            },
+            {
+                "Key": "functionality",
+                "Title": "Functionality",
+                "icon": "sap-icon://soccer",
+                "Content": {
+                    "Title": "Functionality",
+                    "ApplicationOverview": "Core Features",
+                    "Describe": "Vendor Onboarding enables the viewing, submitting, and managing of vendor and client data, with approval/rejection capabilities from various departments.",
+                    "CoreData": [
+                        "Submit vendor general information, financial details, and legal information.",
+                        "View status of submitted vendor/client data.",
+                        "Approve or reject data based on department review.",
+                        "Re-route vendor/client data back for corrections if any fields are incorrect.",
+                        "Enable multi-department approval workflows for thorough data verification.",
+                        "Real-time notifications on the status of vendor data.",
+                        "View second page for related information and additional details on vendor/client status.",
+                        "Search and filter data based on vendor/client name, status, or department."
+                    ]
+                }
+            },
+            {
+                "Key": "problems",
+                "icon": "sap-icon://notes",
+                "Title": "Problems",
+                "Content": {
+                    "Title": "Challenges Encountered",
+                    "ApplicationOverview": "Challenges Encountered",
+                    "Describe": "The development of the Vendor Onboarding application faced several challenges related to data validation and multi-department workflows.",
+                    "CoreData": [
+                        "Ensuring proper synchronization of vendor data across multiple departments.",
+                        "Handling real-time updates and status changes for submitted information.",
+                        "Managing complex workflows for multi-department approval.",
+                        "Ensuring data accuracy and completeness before re-routing or approval.",
+                        "Designing a user-friendly interface that adapts across different devices."
+                    ]
+                }
+            },
+            {
+                "Key": "controls-used",
+                "icon": "sap-icon://my-view",
+                "Title": "Controls",
+                "Content": {
+                    "Title": "Controls",
+                    "Describe": "Vendor Onboarding uses advanced SAPUI5 controls to create a smooth and interactive user experience for handling vendor/client data.",
+                    "ApplicationOverview": "UI Controls Implemented",
+                    "CoreData": [
+                        "sap.m.Input for entering general, financial, and legal information.",
+                        "sap.m.List with sap.m.StandardListItem for displaying vendor data.",
+                        "sap.m.CheckBox for data approval/rejection options.",
+                        "sap.m.Select for selecting department or approval status.",
+                        "sap.m.Button for submitting or re-routing data.",
+                        "sap.m.Table for viewing and managing vendor/client data.",
+                        "sap.ui.layout.Grid for creating responsive layouts for different device sizes."
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "Title": "MIS Dashboard",
+        "Image": "../Images/MisDashboard.png",
+        "Url": "https://filter-ahmed.netlify.app",
+        "Description": "MIS Dashboard is an SAP Fiori/UI5 application that displays and manages data for company groups, particulars, and sub-particulars, with actual, budget, and last year's data in charts",
+        "Status": {
+            "State": "Complete",
+            "LastUpdated": "2023"
+        },
+        "Technology": ["JavaScript", "SAPUI5", "OData", "HTML", "CSS", "JSON", "SAP BTP", "XML"],
+        "Tabs": [
+            {
+                "Key": "information",
+                "icon": "sap-icon://hint",
+                "Title": "Information",
+                "Content": {
+                    "Title": "Application Information",
+                    "ApplicationOverview": "Application Overview",
+                    "Describe": "MIS Dashboard provides an intuitive interface for viewing and comparing financial data across company groups and sub-particulars, with detailed charts and tables for analysis.",
+                    "CoreData": [
+                        "SAPUI5 for building the front-end interface.",
+                        "OData services for backend communication.",
+                        "SAP BTP for cloud deployment and integration.",
+                        "SQLite for local database management.",
+                        "JSON services for demo configurations."
+                    ]
+                }
+            },
+            {
+                "Key": "functionality",
+                "Title": "Functionality",
+                "icon": "sap-icon://soccer",
+                "Content": {
+                    "Title": "Functionality",
+                    "ApplicationOverview": "Core Features",
+                    "Describe": "MIS Dashboard allows users to view and compare actual, budget, and last year's data for company groups, particulars, and sub-particulars with interactive charts.",
+                    "CoreData": [
+                        "View data for company groups, particulars, and sub-particulars.",
+                        "Compare actual vs budget and last year's data.",
+                        "Interactive charts to visualize financial trends.",
+                        "Click on 'View Data' to access detailed tables for each data category.",
+                        "Dynamic filtering and searching by company group, particular, and sub-particular.",
+                        "Export data for analysis and reporting.",
+                        "Responsive design for mobile and desktop use."
+                    ]
+                }
+            },
+            {
+                "Key": "problems",
+                "icon": "sap-icon://notes",
+                "Title": "Problems",
+                "Content": {
+                    "Title": "Challenges Encountered",
+                    "ApplicationOverview": "Challenges Encountered",
+                    "Describe": "The development of the MIS Dashboard application faced several challenges in ensuring data accuracy and performance.",
+                    "CoreData": [
+                        "Ensuring real-time synchronization of financial data across systems.",
+                        "Managing large datasets efficiently for chart and table rendering.",
+                        "Handling complex calculations for actual vs budget comparisons.",
+                        "Optimizing chart rendering for better performance on multiple devices.",
+                        "Ensuring compatibility across various browsers and screen sizes."
+                    ]
+                }
+            },
+            {
+                "Key": "controls-used",
+                "icon": "sap-icon://my-view",
+                "Title": "Controls",
+                "Content": {
+                    "Title": "Controls",
+                    "Describe": "The MIS Dashboard application uses SAPUI5 controls to provide a dynamic and responsive experience for viewing and managing financial data.",
+                    "ApplicationOverview": "UI Controls Implemented",
+                    "CoreData": [
+                        "sap.m.Table for displaying detailed financial data in a tabular format.",
+                        "sap.m.Chart for visualizing actual, budget, and last year's data.",
+                        "sap.m.List for showing company groups, particulars, and sub-particulars.",
+                        "sap.m.Button for triggering 'View Data' action.",
+                        "sap.m.Select for dynamic filtering of data by group or category.",
+                        "sap.m.SearchField for searching specific data points.",
+                        "sap.ui.layout.Grid for responsive layout design."
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "Title": "Dashboard",
+        "Image": "../Images/Dashboard.png",
+        "Url": "https://dashboardsapui5.netlify.app/",
+        "Description": "Dashboard is an SAP Fiori/UI5 application that visualizes sales and distribution data, displaying project-wise, customer-wise, plant-wise, and sales-wise collections in interactive charts",
+        "Status": {
+            "State": "Complete",
+            "LastUpdated": "2023"
+        },
+        "Technology": ["JavaScript", "SAPUI5", "OData", "HTML", "CSS", "JSON", "SAP BTP", "XML"],
+        "Tabs": [
+            {
+                "Key": "information",
+                "icon": "sap-icon://hint",
+                "Title": "Information",
+                "Content": {
+                    "Title": "Application Information",
+                    "ApplicationOverview": "Application Overview",
+                    "Describe": "Dashboard enables efficient visualization and analysis of sales and distribution data with interactive charts, allowing users to view and compare different sales metrics.",
+                    "CoreData": [
+                        "SAPUI5 for creating the front-end interface.",
+                        "OData services for backend communication.",
+                        "SAP BTP for cloud deployment and integration.",
+                        "JSON for local data storage.",
+                        "JSON services for demo configurations."
+                    ]
+                }
+            },
+            {
+                "Key": "functionality",
+                "Title": "Functionality",
+                "icon": "sap-icon://soccer",
+                "Content": {
+                    "Title": "Functionality",
+                    "ApplicationOverview": "Core Features",
+                    "Describe": "Dashboard provides visual representation of sales data with charts for project, customer, plant, and sales-wise collections.",
+                    "CoreData": [
+                        "View project-wise collection data in a column chart.",
+                        "Display customer-wise collection data in a column chart.",
+                        "Analyze plant-wise collection trends using column charts.",
+                        "View sales-wise collection data in column charts.",
+                        "Interact with charts to drill down into specific data points.",
+                        "Enable dynamic filtering of data by time period, region, and sales category.",
+                        "Provide a detailed view of collection data on second-page tables."
+                    ]
+                }
+            },
+            {
+                "Key": "problems",
+                "icon": "sap-icon://notes",
+                "Title": "Problems",
+                "Content": {
+                    "Title": "Challenges Encountered",
+                    "ApplicationOverview": "Challenges Encountered",
+                    "Describe": "The development of the Dashboard application faced a few challenges.",
+                    "CoreData": [
+                        "Managing large datasets and ensuring performance optimization.",
+                        "Ensuring chart accuracy and synchronization with backend data.",
+                        "Handling different data formats for each collection type.",
+                        "Ensuring cross-browser and cross-device compatibility.",
+                        "Designing an intuitive user interface for complex data visualization."
+                    ]
+                }
+            },
+            {
+                "Key": "controls-used",
+                "icon": "sap-icon://my-view",
+                "Title": "Controls",
+                "Content": {
+                    "Title": "Controls",
+                    "Describe": "The Dashboard application utilizes various SAPUI5 controls to provide dynamic data visualization and a user-friendly experience.",
+                    "ApplicationOverview": "UI Controls Implemented",
+                    "CoreData": [
+                        "sap.m.Chart for displaying project, customer, plant, and sales-wise collection data.",
+                        "sap.m.Button for exporting data to Excel or PDF.",
+                        "sap.m.Input for applying dynamic filters.",
+                        "sap.m.Table for displaying detailed collection data.",
+                        "sap.m.SearchField for filtering data based on keywords.",
+                        "sap.ui.layout.Grid for responsive layout design."
+                    ]
+                }
+            }
+        ]
     }
+    
+    
+    
     
 ]

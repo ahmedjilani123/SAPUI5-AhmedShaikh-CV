@@ -56,6 +56,59 @@ sap.ui.define([
         },
         handleLinkObjectAttributePress : function (oEvent) {
             MLibrary.URLHelper.redirect(oEvent.getSource().getProperty("text"), true);
-		}
+		},
+        formatState: function(state) {
+            if (state === "Complete") {
+                return "Success";
+            } else if (state === "In Progress") {
+                return "Warning"; 
+            } else {
+                return "Error"; 
+            }
+        },
+        ValidatedData:function(data,InputSource){
+            let CheckEmail=true,Error={bool:true};
+            var Arr=["Name","Email","FeedBack"]; //Check value
+            for(var i=0; i<Arr.length; i++){
+                InputSource[i].setValueState("None");
+                if (data.hasOwnProperty(Arr[i])) {  
+                    if (data[Arr[i]].trim() == "") { 
+                        Error ={ field: Arr[i],bool:false,InpNum:i}; 
+                        break;
+                    }
+                }else{
+                    Error ={ field: Arr[i],bool:false,InpNum:i}; 
+                    break;
+                }
+            }
+            if(!Error.bool){
+                InputSource[Error.InpNum].setValueState("Error"); 
+                InputSource[Error.InpNum].setValueStateText(`${Error.field} field must be required`);
+                   return false
+               }
+               var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+               if (emailPattern.test(data.Email)) {
+                return true
+               }else{
+                InputSource[1].setValueState("Error");
+                InputSource[1].setValueStateText("Email must be valid");
+                return false;
+               }
+            
+        },
+        OpenLinkbuttonPress:function(data){
+            debugger
+            var sText =data.getSource().getFieldGroupIds(); 
+            switch (sText[0]) {
+                case "LinkedIn":
+                    MLibrary.URLHelper.redirect("https://www.linkedin.com/in/ahmed-jilani-profile", true);
+                    break;
+                case "GitHub":
+                    MLibrary.URLHelper.redirect("https://github.com/ahmedjilani123?tab=repositories", true);
+                    break;
+                default:
+                    return;
+            }
+        }
     });
   });

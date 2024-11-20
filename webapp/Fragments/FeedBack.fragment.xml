@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns:form="sap.ui.layout.form"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+<Dialog title="FeedBack">
+<content>
+<form:SimpleForm >
+<form:content>
+<Input type="Text" placeholder="Name" value="{FeedbackModel>/Name}"></Input>
+<Input type="Email" placeholder="Enter Email" value="{FeedbackModel>/Email}" required="true"></Input>
+<TextArea cols="4" rows="4" placeholder="Enter your feedback here..." value="{FeedbackModel>/FeedBack}"></TextArea>
+</form:content>
+</form:SimpleForm>
+</content>
+<beginButton>
+<Button text="Submit" type="Emphasized" press="SubmitDataFeedbackToYouPress"></Button>
+</beginButton>
+<endButton>
+<Button text="Cancel" type="Ghost" press="CancelFeedbackDialogPress"></Button>
+</endButton>
+</Dialog>
+</core:FragmentDefinition>
