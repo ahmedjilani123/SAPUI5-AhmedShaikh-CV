@@ -1,0 +1,22 @@
+/* Enter your custom styles here */
+.clickable-card {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: box-shadow 0.2s ease;
+}
+
+.clickable-card:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.status-badge {
+    background-color: #ffa726; /* Orange for 'In Progress' */
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+#TaskDetail{
+    position: sticky !important;
+    top: 0;
+}

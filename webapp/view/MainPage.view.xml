@@ -1,0 +1,456 @@
+  <mvc:View
+    xmlns:form="sap.ui.layout.form"
+     controllerName="ascv.sap.portfolio.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:obj="sap.uxap"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m"
+    xmlns:cards="sap.f.cards"
+    xmlns:f="sap.f"
+>
+  
+  
+  <obj:ObjectPageLayout
+                id="ObjectPageLayout"
+                showTitleInHeaderContent="true"
+                showEditHeaderButton="true"
+                editHeaderButtonPress="handleEditBtnPress"
+                upperCaseAnchorBar="false"
+            >
+                <obj:headerTitle>
+                    <obj:ObjectPageDynamicHeaderTitle
+                        backgroundDesign="Translucent"
+                    >
+                        <obj:expandedHeading>
+                            <HBox>
+                                <Title
+                                    text="Ahmed Shaikh"
+                                    wrapping="true"
+                                />
+                                <ObjectMarker
+                                    type="Favorite"
+                                    class="sapUiTinyMarginBegin"
+                                />
+                            </HBox>
+                        </obj:expandedHeading>
+
+                        <obj:snappedHeading>
+                            <FlexBox
+                                fitContainer="true"
+                                alignItems="Center"
+                            >
+                                <Avatar
+                                    src="../Images/profile.jpg"
+                                    class="sapUiTinyMarginEnd"
+                                />
+                                <Title
+                                    text="Ahmed Shaikh"
+                                    wrapping="true"
+                                />
+                            </FlexBox>
+                        </obj:snappedHeading>
+
+                        <obj:expandedContent>
+                            <Text text="SAPUI5 Developer" />
+                        </obj:expandedContent>
+
+                        <obj:snappedContent>
+                            <Text text="SAPUI5 Developer" />
+                        </obj:snappedContent>
+
+                        <obj:snappedTitleOnMobile>
+                            <Title text="SAPUI5 Developer" />
+                        </obj:snappedTitleOnMobile>
+
+                        <obj:actions>
+                            <Button
+                                type="Emphasized"
+                                
+                                icon="../Images/linkedin2.png"
+                                press="toggleFooter"
+                            />
+                             <Button
+                                type="Accept"
+                                ariaLabelledBy="GitHub"
+                                ariaHasPopup="Dialog"
+                                ariaDescribedBy="GitHub"
+                                icon="../Images/github126.png"
+                                press="toggleFooter"
+                            />
+                            <Button
+                                type="Success"
+                                text="CV"
+                                icon="sap-icon://download"
+                                press="toggleFooter"
+                            />
+                            <Switch
+                                change="SWitchThemePress"
+                                state="{viewModel>/isDarkMode}"
+                                customTextOn="🌥️" 
+                                customTextOff="🌩️" ariaLabelledBy="dark and light mode"
+                            />
+                        </obj:actions>
+                    </obj:ObjectPageDynamicHeaderTitle>
+                </obj:headerTitle>
+
+                <obj:headerContent>
+                    <FlexBox wrap="Wrap">
+                        <Avatar
+                            class="sapUiSmallMarginEnd"
+                            src="../Images/profile.jpg"
+                            displaySize="L"
+                        />
+                        <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                            <Text
+                                text="Passionate about crafting seamless SAPUI5 applications "
+                                wrapping="true"
+                            />
+                            <Text
+                                text="that elevate user experiences. Always learning, always innovating."
+                            />
+                            <VBox>
+                                <Label text="SAP Fiori/UI5" />
+                                <ProgressIndicator
+                                    percentValue="85"
+                                    displayValue="85%"
+                                    state="Success"
+                                />
+                            </VBox>
+                        </layout:VerticalLayout>
+
+                        <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                            <layout:VerticalLayout>
+                                <ObjectStatus
+                                    icon="sap-icon://da"
+                                    title="Skills"
+                                    text="SAP BTP,SAP CAPM,Fiori/UI5"
+                                />
+                                <ObjectStatus
+                                    title="Country"
+                                    text="India"
+                                />
+                                <ObjectStatus
+                                    title="Language"
+                                    text="English,Hindi"
+                                />
+                                <ObjectStatus
+                                    icon="sap-icon://call"
+                                    title="Mobile Number"
+                                    text="+91-63530-38823"
+                                />
+                            </layout:VerticalLayout>
+                        </layout:VerticalLayout>
+                        <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                            <layout:VerticalLayout>
+                                <ObjectStatus
+                                    icon="sap-icon://end-user-experience-monitoring"
+                                    title="Experience"
+                                    text=" 2 Year SAP Fiori/ui5"
+                                />
+                                <ObjectStatus
+                                    icon="sap-icon://study-leave"
+                                    title="Qualification"
+                                    text="Bachelor of Technology (CE)"
+                                />
+                                <ObjectStatus
+                                    icon="sap-icon://email"
+                                    title="Email"
+                                    text="shaikhahmedjilani7860@gmail.com"
+                                />
+                            </layout:VerticalLayout>
+                        </layout:VerticalLayout>
+                    </FlexBox>
+                </obj:headerContent>
+
+                <obj:sections>
+                    <obj:ObjectPageSection
+                        titleUppercase="false"
+                        id="personal"
+                        title="Objective"
+                    >
+                        <obj:ObjectPageSubSection
+                            title="Objective"
+                            titleUppercase="false"
+                        >
+                            <Text
+                                text="I strive to apply my programming skills and software development experience to contribute to a forward-thinking tech team and create innovative solutions. Proficient in SAP BTP, CAPM, Node.js, and JavaScript and other web technologies."
+                            />
+                        </obj:ObjectPageSubSection>
+                    </obj:ObjectPageSection>
+                    <obj:ObjectPageSection
+                        titleUppercase="false"
+                        title="Certification"
+                    >
+                        <obj:ObjectPageSubSection
+                            title="Certification"
+                            titleUppercase="false"
+                        >
+                                <layout:Grid containerQuery="true" width="100%" hSpacing="1" vSpacing="1"   >
+                                    <f:Card
+                                        height="100%"
+                                        width="100%" class="sapUiSmallMarginTop"
+                                    >
+                                        <f:content>
+                                            <VBox
+                                                alignItems="Center"
+                                                justifyContent="Center"
+                                                width="100%"
+                                                class="sapUiSmallMargin"
+                                            >
+                                                <Avatar
+                                                    src="../Images/almathon.png"
+                                                    press=".onTilePress"
+                                                />
+                                                <Link
+                                                    text="ALMathon 2024 – Participant"
+                                                    press=".onTilePress"
+                                                />
+                                            </VBox>
+                                        </f:content>
+                                    </f:Card>
+                                      <f:Card
+                                        height="100%"
+                                        width="100%" class="sapUiSmallMarginTop"
+                                    >
+                                        <f:content>
+                                            <VBox
+                                                alignItems="Center"
+                                                justifyContent="Center"
+                                                width="100%"
+                                                class="sapUiSmallMargin"
+                                            >
+                                                <Avatar
+                                                    src="../Images/almathon.png"
+                                                    press=".onTilePress"
+                                                />
+                                                <Link
+                                                    text="HTML"
+                                                    press=".onTilePress"
+                                                />
+                                            </VBox>
+                                        </f:content>
+                                    </f:Card>
+                                </layout:Grid>
+                           
+                        </obj:ObjectPageSubSection>
+                    </obj:ObjectPageSection> 
+                      <!-- //sap btp section -->
+                      <obj:ObjectPageSection
+                        titleUppercase="false"
+            
+                        title="SAP BTP"
+                    >
+                        <obj:ObjectPageSubSection
+                            title="SAP BTP"
+                            titleUppercase="false"
+                        >
+                           <layout:VerticalLayout >
+                           <Text text="&#8226; I have expertise in utilizing various SAP BTP services, including Build Work Zone for creating unified digital workspaces and Cloud Foundry for deploying cloud-native applications."></Text>
+                           <Text text="&#8226; I am skilled in configuring IAS for secure authentication, TMS for transport management, MDK for mobile app development, and Destination Service for seamless system integration."></Text>
+                           <Text  text="&#8226; Configuration and management of Cloud Foundry Environment"/>
+                            <Text text="&#8226; Custom UI5 and Open UI5 Application development from scratch."></Text>
+                            <Text text="&#8226; Development of unified workspaces using SAP Build Work Zone"/>
+                            <Text text="&#8226; Application development using SAP Business Application Studio (BAS)"/>
+                            <Text text="&#8226; Destination configuration for different system integration."></Text>
+                            <Text text="&#8226; Portal/Launchpad configuration for Fiori/UI5 app access."></Text>
+                            <Text text="&#8226; Implementation of CI/CD pipelines for efficient development and deployment"/>
+                            <Text text="&#8226; TMS (Transport Management Service) setup for managing application transports"/>
+                            <Text text="&#8226; Configuration of Cloud Connector for secure on-premise system integration"/>
+                            <Text text="&#8226; Configuration and implementation of Identity Authentication Service (IAS) for SSO and user management"/>
+                                   
+
+
+
+
+                           </layout:VerticalLayout>
+                        </obj:ObjectPageSubSection>
+                    </obj:ObjectPageSection>
+                     <!-- //sap fiori ui5 section -->
+                     <obj:ObjectPageSection
+                        titleUppercase="false"
+            
+                        title="SAP Fiori/UI5"
+                    >
+                        <obj:ObjectPageSubSection
+                            title="SAP Fiori/UI5"
+                            titleUppercase="false"
+                        >
+                            <layout:VerticalLayout >
+                            <Text text="&#8226; I have completed one end to end custom UI5 project implementations in SAP Fiori."></Text>
+                            <Text text="&#8226; Implement and deploy custom SAP Fiori applications, configuration for user roles, catalogs, and groups and theme designer."></Text>
+                           <Text  text="&#8226; Expert in implement and activate the standard Fiori apps in s4/Hana."/>
+                            <Text text="&#8226; Custom UI5 and Open UI5 Application development from scratch."></Text>
+                            <Text text="&#8226; Deploy App using SAPUI5 ABAP Repository and register to SAP Fiori Launchpad."/>
+                            <Text text="&#8226; Concept of MVC, Fragments and Component.js in SAP UI5."/>
+                            <Text text="&#8226; Knowledge of CRUD Operation Using OData Model in SAP OData."></Text>
+                            <Text text="&#8226; Knowledge of to Create Service and Table In OData and CRUD Operation in SAP. Also basic knowledge of DPC and MPC class"></Text>
+                            <Text text="&#8226; Knowledge of custom Apps development using UI5, HTML5, JavaScript, CSS3 and debugging in sapui5 apps."/>
+                            <Text text="&#8226; Having knowledge of UI5 Custom Control and use of external library."/>
+                            <Text text="&#8226; I have Hands on experience in CURD using Cloud Application Programming Model."/>
+                            <Text text="&#8226; I have also hands on experience in Fiori Elements."/>
+                           </layout:VerticalLayout>
+                        </obj:ObjectPageSubSection>
+                    </obj:ObjectPageSection>
+                     <obj:ObjectPageSection
+                        titleUppercase="false"
+                        title="Other Technical Skills"
+                    >
+                        <obj:ObjectPageSubSection
+                            title="Other Technical Skills"
+                            titleUppercase="false"
+                        >
+                            <layout:VerticalLayout >
+                            <Text text="&#8226; I have Hands-on experience in building RESTful APIs with Node.js and Express.js."></Text>
+                            <Text text="&#8226; Experienced in building dynamic, responsive user interfaces with React.js."></Text>
+                           <Text  text="&#8226; Skilled in creating modern, responsive designs using Tailwind CSS and custom CSS."/>
+                            <Text text="&#8226; Experienced in using JavaScript for both client-side and server-side development (Node.js)"></Text>
+                            <Text text="&#8226; Hands-on experience with Git for version control and collaborating in team-based projects."/>
+                            <Text text="&#8226; Proficient in implementing state management in React using hooks and context API."/>
+                            <Text text="&#8226; Able to build and deploy scalable applications on cloud platforms such as SAP BTP."></Text>
+                           
+                           </layout:VerticalLayout>
+                        </obj:ObjectPageSubSection>
+                    </obj:ObjectPageSection>
+                    <obj:ObjectPageSection  title="SAP Professional Experience" titleUppercase="false">
+                  <obj:subSections>
+                  <obj:ObjectPageSubSection title="Project # 1 - Barcode Scanner Application for Process automation.">
+                  <layout:VerticalLayout >
+                  <ObjectStatus title="Client Name" text="Sintex-welspun"></ObjectStatus>
+                  <ObjectStatus title="Role" text="SAP Fiori/UI5 Developer"></ObjectStatus>
+                  <ObjectStatus title="Team Size" text="15+"></ObjectStatus>
+                  <ObjectStatus title="Environment" text="Sap WebIde tool"></ObjectStatus>
+                  <ObjectStatus title="Project Information" text="The Barcode Scan Application for Process Automation aims to streamline and automate the process of managing production and stock transfers within the client's manufacturing and logistics operations. The solution involves the integration of barcode scanning functionality to track and process materials as they move through various stages, including FG (Finished Goods) to SFG (Semi-Finished Goods), and further to delivery and PGI (Post Goods Issue) to stock transfer. The application is built using SAP Fiori/UI5, incorporating various controls such as Input, Button, FilterObject, Table (SAP.m.Table), Dialog, Fragment, Formatter, and Form to enhance user interaction and ensure a smooth, responsive, and efficient experience. The application also leverages OData services for seamless integration with backend systems, ensuring real-time data exchange for accurate tracking and updating of inventory and production data."/>
+                    </layout:VerticalLayout>
+                  </obj:ObjectPageSubSection>
+                     <obj:ObjectPageSubSection title="Project # 2 - Health Monitoring Application">
+                  <layout:VerticalLayout >
+                  <ObjectStatus title="Client Name" text="In House - Daffodils Info Solutions Pvt.Ltd"></ObjectStatus>
+                  <ObjectStatus title="Role" text="SAP Fiori/UI5 Developer"></ObjectStatus>
+                  <ObjectStatus title="Team Size" text="10+"></ObjectStatus>
+                  <ObjectStatus title="Environment" text="SAP BTP"></ObjectStatus>
+                  <ObjectStatus title="Project Information" text="The Health Monitoring Application is designed to track and monitor various health-related KPIs (Key Performance Indicators) for individuals. It integrates real-time data from SAP APIs and provides a user-friendly interface based on SAP Fiori design principles.
+
+The application includes features like input fields for capturing user data such as date ranges or specific KPI searches, SAP.m.Table for displaying health metrics in a structured and sortable format, and a filter object to refine the displayed data based on user-defined criteria like date or thresholds. Navigation between views is handled using a router with parameters, allowing seamless transitions with context-specific data such as user IDs or selected KPIs.
+
+To enhance visualization, the application leverages VizFrame charts, including pie charts for representing percentage-based distributions (e.g., time spent in different heart rate zones) and column charts for showing trends over time (e.g., weekly or monthly activity levels).
+
+By combining these controls and features, the application delivers actionable insights and an interactive user experience while maintaining responsiveness across all devices."/>
+                    </layout:VerticalLayout>
+                  </obj:ObjectPageSubSection>
+                     <obj:ObjectPageSubSection title="Project # 3 - Ticketalk">
+                  <layout:VerticalLayout >
+                  <ObjectStatus title="Client Name" text="In House - Daffodils Info Solutions Pvt.Ltd"></ObjectStatus>
+                  <ObjectStatus title="Role" text="SAP Fiori/UI5 Developer"></ObjectStatus>
+                  <ObjectStatus title="Team Size" text="15+"></ObjectStatus>
+                  <ObjectStatus title="Environment" text="SAP BTP"></ObjectStatus>
+                  <ObjectStatus title="Project Information" text="The Ticketalk Application is designed to streamline and manage the ticketing process within the organization. The application provides functionality for raising, managing, and tracking tickets, enabling efficient communication and resolution of issues. It includes features such as creating and managing tickets, viewing ticket details, closing tickets, and sending email notifications to the relevant client. Additionally, the system displays the details of users who created tickets, ensuring accountability and transparency.This application is built using SAP Fiori/UI5 and includes controls such as Input, MaskInput, SAP.m.Table, FilterObject, Flexible Column Layout, Dialog, ShellBar, and Fragment, enhancing its functionality and user experience."/>
+                    </layout:VerticalLayout>
+                  </obj:ObjectPageSubSection>
+                  </obj:subSections>
+                    </obj:ObjectPageSection>
+                    <!-- Task Section  -->
+                    <obj:ObjectPageSection title="Task " titleUppercase="false">
+                   <obj:ObjectPageSubSection title="Task" titleUppercase="false">
+                    
+                                	<Carousel
+			id="carouselSample"
+			ariaLabelledBy="carouselTitle"
+			height="auto" width="100%" arrowsPlacement="Content" backgroundDesign="Solid" showPageIndicator="false" 
+			pages="{TaskModel>/}">
+			<customLayout>
+				<CarouselLayout visiblePagesCount="{CarouselModel>/CountPage}"/>
+			</customLayout>
+			<Panel class="clickable-card"  >
+                                          <headerToolbar>
+            <Toolbar>
+                <HBox width="100%" justifyContent="SpaceBetween" alignItems="Center">
+                    <Title text="{TaskModel>Title}"></Title>
+                   	<ObjectNumber
+				class="sapUiTinyMarginEnd"
+		
+				number="{TaskModel>Title/Status/State}"
+				unit=""
+				state="Success" />
+                </HBox>
+            </Toolbar>
+        </headerToolbar>
+        <content>
+            <VBox alignItems="Start" class="sapUiTinyMargin" >
+               <Image xmlns="sap.m" 
+       src="{= ${TaskModel>Image} ? ${TaskModel>Image} : '../Images/launchpad.png' }" 
+       alt="Task Image" 
+       width="100%" 
+       class="clickable-card sapUiTinyMarginBottom"/>
+
+                <HBox alignItems="Center" class="">
+                  <ObjectStatus title="Task title" text="{TaskModel>Title}" ></ObjectStatus>
+                </HBox>
+                <ObjectStatus title="Description" text="{TaskModel>Description}" />
+             <FlexBox justifyContent="Center" wrap="Wrap" items="{TaskModel>Technology}">
+               	<ObjectNumber
+				class="sapUiTinyMargin"
+				inverted="true"
+				number="# {TaskModel>}"
+				unit="" />
+             </FlexBox>
+            </VBox>
+   <HBox  width="100%" justifyContent="SpaceBetween" >
+               <Button text="View Task Detail" type="Transparent" press="TaskDetailPress"></Button>
+                <ToolbarSpacer />
+                <Button  type="Transparent" text="open app"></Button>
+            
+               </HBox>
+
+            
+        </content>
+    </Panel>
+		</Carousel>
+                   </obj:ObjectPageSubSection>
+                
+                    </obj:ObjectPageSection>
+                    <!-- Education Section -->
+                    <obj:ObjectPageSection title="Education Qualifications" titleUppercase="false">
+                    <obj:subSections>
+                      <obj:ObjectPageSubSection title="College">
+                    <layout:VerticalLayout >
+                    
+                    
+                    <Title text="Bachelor of Technology in Computer Science"></Title>
+                    <ObjectStatus title="College Name" text="Silver Oak University"></ObjectStatus>
+                    <ObjectStatus title="Year" text="2022-2026"></ObjectStatus>
+                    <ObjectStatus title="GPA" text="Present"></ObjectStatus>
+                    <ObjectStatus title="Location" text="Ahmedabad"></ObjectStatus>
+                    
+                    </layout:VerticalLayout>
+                    </obj:ObjectPageSubSection>
+                    <obj:ObjectPageSubSection title="Higher Secondary School Certificate">
+                    <layout:VerticalLayout >
+                    
+                    
+                  
+                    <ObjectStatus title="School Name" text="Ankur School - Paldi"></ObjectStatus>
+                    <ObjectStatus title="Year" text="2020-2022"></ObjectStatus>
+                    <ObjectStatus title="Percentage" text="58.5"></ObjectStatus>
+                    <ObjectStatus title="Location" text="Ahmedabad"></ObjectStatus>
+                    
+                    </layout:VerticalLayout>
+                    </obj:ObjectPageSubSection>
+                     <obj:ObjectPageSubSection title="Secondary School Certificate">
+                    <layout:VerticalLayout >
+                    
+                    
+                
+                    <ObjectStatus title="School Name" text="Ruth Memorial School - Vasna"></ObjectStatus>
+                    <ObjectStatus title="Year" text="2019-2020"></ObjectStatus>
+                    <ObjectStatus title="Percentage" text="78.2"></ObjectStatus>
+                    <ObjectStatus title="Location" text="Ahmedabad"></ObjectStatus>
+                    
+                    </layout:VerticalLayout>
+                    </obj:ObjectPageSubSection>
+                    </obj:subSections>
+                    </obj:ObjectPageSection>
+                </obj:sections>
+            </obj:ObjectPageLayout>
+
+
+            </mvc:View>

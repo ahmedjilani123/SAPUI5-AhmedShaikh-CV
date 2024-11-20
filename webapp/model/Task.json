@@ -1,0 +1,175 @@
+[
+    {
+        "Title": "Sales Order Application",
+        "Image": "../Images/SalesOrder.png",
+        "Url": "https://salesorderpro.netlify.app/",
+        "Description": "SalesOrder is an SAP Fiori/UI5 app that streamlines order management with an intuitive interface for creating, monitoring, and managing sales orders, optimizing sales operations.",
+        "Status": {
+            "State": "Complete",
+            "LastUpdated": "20 Nov 2024"
+        },
+        "Technology": ["JavaScript", "SAPUI5", "OData", "HTML", "CSS", "JSON", "SAP BTP","XML"],
+        "Tabs": [
+            {
+                "Key": "information",
+                "icon": "sap-icon://hint",
+                "Title": "Information",
+                "Content": {
+                    "Title": "Application Information",
+                    "ApplicationOverview": "Application Overview",
+                    "Describe": "SalesOrder simplifies order processing by providing real-time order status, customer details, and seamless integration with backend systems.",
+                    "CoreData": [
+                        "SAPUI5 for the frontend user interface.",
+                        "OData services for backend integration.",
+                        "SAP BTP for cloud deployment.",
+                        "SQLite for local database management.",
+                        "JSON services for Demo"
+                    ]
+                }
+            },
+            {
+                "Key": "functionality",
+                "Title": "Functionality",
+                "icon": "sap-icon://soccer",
+                "Content": {
+                    "Title": "Functionality",
+                    "ApplicationOverview": "Core Features",
+                    "Describe": "SalesOrder provides features for creating and managing customers, items, and orders.",
+                    "CoreData": [
+                        "Create, edit, and delete customers.",
+                        "Add and manage order items.",
+                        "Track real-time order statuses.",
+                        "Export orders to PDF or Excel formats (develop for future).",
+                        "Generate purchase reports for analysis.",
+                        "Filter orders by customer, date range, or order status.",
+                        "Sort orders in ascending or descending order by amount, date, or customer name.",
+                        "Dynamic searching for orders and items based on keywords.",
+                        "Group orders by customer or status for easy management."
+                    ]
+                }
+            },
+            {
+                "Key": "problems",
+                "icon": "sap-icon://notes",
+                "Title": "Problems",
+                "Content": {
+                    "Title": "Challenges Encountered",
+                    "ApplicationOverview": "Challenges Encountered",
+                    "Describe": "The development of the SalesOrder application faced a few challenges.",
+                    "CoreData": [
+                        "Integration with complex backend systems.",
+                        "Optimizing performance for large datasets.",
+                        "Handling multi-language and regional formats.",
+                        "Ensuring UI responsiveness on various devices.",
+                        "Managing dynamic relationships between customers and orders."
+                    ]
+                }
+            },
+            {
+                "Key": "controls-used",
+                "icon": "sap-icon://my-view",
+                "Title": "Controls",
+                "Content": {
+                    "Title": "Controls",
+                    "Describe": "The SalesOrder application leverages SAPUI5 controls to provide a seamless user experience.",
+                    "ApplicationOverview": "UI Controls Implemented",
+                    "CoreData": [
+                        "sap.m.Input for customer and order details input.",
+                        "sap.m.List with sap.m.StandardListItem for displaying order lists.",
+                        "sap.f.DynamicPage for creating flexible layouts.",
+                        "sap.m.ObjectStatus for displaying order statuses.",
+                        "sap.m.Table for order item details.",
+                        "sap.m.Dialog for creating and editing customer or order data."
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "Title": "Custom Fiori Launchpad",
+        "Image": "../Images/launchpad.png",
+        "Url": "https://customfiorilaunchpad.netlify.app/",
+        "Description": "Custom Fiori Launchpad is a tailored SAP Fiori/UI5 application that serves as a central hub for managing various custom applications, enabling efficient SAP workflow customization.",
+        "Status": {
+            "State": "Complete",
+            "LastUpdated": "20 Nov 2024"
+        },
+        "Technology": ["JavaScript", "SAPUI5", "OData", "HTML", "CSS", "JSON", "SAP BTP", "XML"],
+        "Tabs": [
+            {
+                "Key": "information",
+                "icon": "sap-icon://hint",
+                "Title": "Information",
+                "Content": {
+                    "Title": "Application Information",
+                    "ApplicationOverview": "Application Overview",
+                    "Describe": "Custom Fiori Launchpad streamlines SAP application management by providing an intuitive interface for accessing, categorizing, and managing all SAP apps in one place.",
+                    "CoreData": [
+                        "SAPUI5 for creating the front-end interface.",
+                        "OData services for backend communication.",
+                        "SAP BTP for cloud deployment and integration.",
+                        "SQLite for local database storage.",
+                        "JSON services for demo configurations."
+                    ]
+                }
+            },
+            {
+                "Key": "functionality",
+                "Title": "Functionality",
+                "icon": "sap-icon://soccer",
+                "Content": {
+                    "Title": "Functionality",
+                    "ApplicationOverview": "Core Features",
+                    "Describe": "Custom Fiori Launchpad provides features for creating, reading, updating, and deleting (CRUD) applications displayed on the launchpad.",
+                    "CoreData": [
+                        "Add new applications with name, image, and URL.",
+                        "Edit application details for customization.",
+                        "Delete unwanted applications from the launchpad.",
+                        "Categorize apps by functional groups for easy access.",
+                        "Dynamic search and filtering of applications by name or category.",
+                        "Drag-and-drop functionality for rearranging app tiles.",
+                        "Responsive design to adapt across devices.",
+                        "Enable user-specific application views and preferences."
+                    ]
+                }
+            },
+            {
+                "Key": "problems",
+                "icon": "sap-icon://notes",
+                "Title": "Problems",
+                "Content": {
+                    "Title": "Challenges Encountered",
+                    "ApplicationOverview": "Challenges Encountered",
+                    "Describe": "The development of the Custom Fiori Launchpad application faced several challenges.",
+                    "CoreData": [
+                        "Implementing drag-and-drop functionality for tile customization.",
+                        "Managing real-time synchronization with backend systems.",
+                        "Optimizing performance for large numbers of applications.",
+                        "Ensuring cross-browser compatibility.",
+                        "Customizing the UI to handle varying user preferences and themes."
+                    ]
+                }
+            },
+            {
+                "Key": "controls-used",
+                "icon": "sap-icon://my-view",
+                "Title": "Controls",
+                "Content": {
+                    "Title": "Controls",
+                    "Describe": "The Custom Fiori Launchpad application utilizes advanced SAPUI5 controls for a dynamic and interactive user experience.",
+                    "ApplicationOverview": "UI Controls Implemented",
+                    "CoreData": [
+                        "sap.m.TileContainer for arranging app tiles.",
+                        "sap.m.GenericTile for displaying app details.",
+                        "sap.m.Input for entering app metadata.",
+                        "sap.m.List with sap.m.StandardListItem for categorizing applications.",
+                        "sap.m.Dialog for adding or editing application details.",
+                        "sap.m.SearchField for dynamic application filtering.",
+                        "sap.ui.layout.Grid for responsive layout design."
+                    ]
+                }
+            }
+        ]
+    }
+    
+]

@@ -1,0 +1,39 @@
+<mvc:View xmlns:tnt="sap.tnt"
+    xmlns:form="sap.ui.layout.form"
+    controllerName="ascv.sap.portfolio.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:obj="sap.uxap"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m"
+    xmlns:cards="sap.f.cards"
+    xmlns:f="sap.f"
+>
+
+			
+            <MessageStrip id="MessageStripID"
+				text="We’re happy to have you here! Take a moment to read through the profile and explore the projects. Your feedback is always appreciated!"
+				type="Success"
+                
+				showIcon="true"
+                customIcon="sap-icon://person-placeholder"
+				showCloseButton="true"
+			/>
+           
+             <f:FlexibleColumnLayout id="flexID" layout="{ColumnLayout>/FLayout}" >
+
+                <f:beginColumnPages>
+                           <mvc:XMLView viewName="ascv.sap.portfolio.view.MainPage"/>
+                </f:beginColumnPages>
+                <f:midColumnPages>
+                    <Page id="midColumnPage" showHeader="false" >
+                   
+                <content>
+                    <mvc:XMLView viewName="ascv.sap.portfolio.view.TaskDetail" id="taskDetailPage" />
+                </content>
+            </Page>
+                </f:midColumnPages>
+            </f:FlexibleColumnLayout>
+           
+    
+    
+</mvc:View>

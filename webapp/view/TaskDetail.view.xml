@@ -1,0 +1,96 @@
+<mvc:View
+    xmlns:form="sap.ui.layout.form"
+    controllerName="ascv.sap.portfolio.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:obj="sap.uxap"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m"
+    xmlns:cards="sap.f.cards"
+    xmlns:f="sap.f">
+
+    <!-- Dynamic Header Title -->
+    <obj:ObjectPageDynamicHeaderTitle id="TaskDetail">
+        <!-- Navigation Actions -->
+        <obj:navigationActions>
+            <OverflowToolbarButton
+                type="Transparent"
+                icon="sap-icon://decline"
+                press="handleCloseSideScreenPre"
+                id="closeButton"
+                tooltip="Close" />
+        </obj:navigationActions>
+
+        <!-- Title and Description -->
+        <obj:expandedHeading>
+            <VBox>
+                <Title
+                    text="{sidesideTaskModel>/Title}"
+                    level="H1"
+                    wrapping="true"
+                    class="sapUiSmallMarginBottom" />
+                <Text
+                    text="{sideTaskModel>/Description}"
+                    class="sapUiTinyMarginBottom"
+                    wrapping="true" />
+            </VBox>
+        </obj:expandedHeading>
+
+        <!-- Status -->
+        <obj:expandedContent>
+    
+            <layout:HorizontalLayout>
+            	
+                <ObjectStatus
+                    title="Status"
+                    text="{sideTaskModel>/Status/State}"
+                    state="{= ${sideTaskModel>/Status/State} === 'In Progress' ? 'Warning' : 'Success'}"
+                    class="sapUiSmallMarginEnd" />
+                <ObjectStatus
+                    title="Last Updated"
+                    text="{sideTaskModel>/Status/LastUpdated}"
+                    state="Information" />
+            </layout:HorizontalLayout>
+            
+        <ObjectAttribute
+			text="{sideTaskModel>/Url}"
+			active="true"
+			press="handleLinkObjectAttributePress" class="sapUiTinyMargin" />
+        </obj:expandedContent>
+    </obj:ObjectPageDynamicHeaderTitle>
+
+    <!-- IconTabBar -->
+    <IconTabBar
+        id="idIconTabBarMulti"
+        expanded="true"
+        class="sapUiResponsiveContentPadding"
+        items="{sideTaskModel>/Tabs}">
+        <items>
+            <!-- Dynamic Tab -->
+            <IconTabFilter
+                icon="{sideTaskModel>icon}"
+                key="{sideTaskModel>Key}"
+                text="{sideTaskModel>Title}">
+                <VBox class="sapUiSmallMargin">
+                    <!-- Tab Title -->
+                    	<ScrollContainer
+					height="100%"
+					width="100%"
+					horizontal="false"
+					vertical="true">
+                    <Title text="{sideTaskModel>Content/ApplicationOverview}" level="H2" />
+                    <Text text="{sideTaskModel>Content/Describe}" />
+
+                    <!-- Dynamic List -->
+                    <Title text="{sideTaskModel>Content/Title}" level="H3" class="sapUiSmallMarginTop" />
+                    
+                    <List items="{sideTaskModel>Content/CoreData}">
+                        <StandardListItem title="{sideTaskModel>}" wrapping="true" />
+
+                    </List>
+                    	</ScrollContainer>
+                </VBox>
+            </IconTabFilter>
+        </items>
+    </IconTabBar>
+
+</mvc:View>
