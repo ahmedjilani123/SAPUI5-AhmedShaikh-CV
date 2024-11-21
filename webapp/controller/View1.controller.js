@@ -1,12 +1,15 @@
 sap.ui.define([
     "./BaseController",
     'sap/ui/core/Fragment',
-    "sap/m/MessageBox"
-], (BaseController,Fragment,MessageBox) => {
+    "sap/m/MessageBox",
+    'sap/ui/core/BusyIndicator'
+], (BaseController,Fragment,MessageBox,BusyIndicator) => {
     "use strict";
 
     return BaseController.extend("ascv.sap.portfolio.controller.View1", {
-        onInit() {},
+        onInit() {
+            BusyIndicator.hide()
+        },
         onAfterRendering: function () {
             let oModel = this.getView().getModel("viewModel"),theme;
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -50,6 +53,7 @@ sap.ui.define([
                  "senderName":InfoData.Name
                 
               }
+              BusyIndicator.show();
             $.ajax({
                 url: "https://email-feed-back-sapa.vercel.app/Email",
                 method: "POST",
@@ -57,6 +61,7 @@ sap.ui.define([
                 dataType: "json",
                 contentType: "application/json",
                 success: function(data){
+                    BusyIndicator.hide()
                     console.log("Response Data:", data.Messsage);
                     that.getOwnerComponent().getModel("FeedbackModel").setData({});
                     that.getOwnerComponent().getModel("FeedbackModel").refresh(true);
@@ -64,6 +69,7 @@ sap.ui.define([
                     oEvent.getSource().getParent().close();
                 },
                 error:function(err){
+                    BusyIndicator.hide()
                     console.error("AJAX Error Details:", err);
                     sap.m.MessageToast.show("Error occurred: " + (err.statusText || "Unknown Error"));
                     oEvent.getSource().getParent().close();
