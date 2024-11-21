@@ -311,7 +311,7 @@
                     </obj:ObjectPageSection>
                     <obj:ObjectPageSection  title="SAP Professional Experience" titleUppercase="false">
                   <obj:subSections>
-                  <obj:ObjectPageSubSection title="Project # 1 - Barcode Scanner Application for Process automation.">
+                  <obj:ObjectPageSubSection  title="Project # 1 - Barcode Scanner App for Process automation.">
                   <layout:VerticalLayout >
                   <ObjectStatus title="Client Name" text="Sintex-welspun"></ObjectStatus>
                   <ObjectStatus title="Role" text="SAP Fiori/UI5 Developer"></ObjectStatus>
@@ -320,7 +320,7 @@
                   <ObjectStatus title="Project Information" text="The Barcode Scan Application for Process Automation aims to streamline and automate the process of managing production and stock transfers within the client's manufacturing and logistics operations. The solution involves the integration of barcode scanning functionality to track and process materials as they move through various stages, including FG (Finished Goods) to SFG (Semi-Finished Goods), and further to delivery and PGI (Post Goods Issue) to stock transfer. The application is built using SAP Fiori/UI5, incorporating various controls such as Input, Button, FilterObject, Table (SAP.m.Table), Dialog, Fragment, Formatter, and Form to enhance user interaction and ensure a smooth, responsive, and efficient experience. The application also leverages OData services for seamless integration with backend systems, ensuring real-time data exchange for accurate tracking and updating of inventory and production data."/>
                     </layout:VerticalLayout>
                   </obj:ObjectPageSubSection>
-                     <obj:ObjectPageSubSection title="Project # 2 - Health Monitoring Application">
+                     <obj:ObjectPageSubSection title="Project # 2 - Health Monitoring App..">
                   <layout:VerticalLayout >
                   <ObjectStatus title="Client Name" text="In House - Daffodils Info Solutions Pvt.Ltd"></ObjectStatus>
                   <ObjectStatus title="Role" text="SAP Fiori/UI5 Developer"></ObjectStatus>
