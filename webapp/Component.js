@@ -1,9 +1,8 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "ascv/sap/portfolio/model/models",
-"sap/ui/Device",
-'sap/ui/core/BusyIndicator'
-], (UIComponent, models,Device,BusyIndicator) => {
+"sap/ui/Device"
+], (UIComponent, models,Device) => {
     "use strict";
 
     return UIComponent.extend("ascv.sap.portfolio.Component", {
@@ -15,7 +14,6 @@ sap.ui.define([
         },
 
         init() {
-            BusyIndicator.show();
             // call the base component's init function
             UIComponent.prototype.init.apply(this, arguments);
            var iPagesCount = 1;

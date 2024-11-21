@@ -11,7 +11,7 @@
   
   
   <obj:ObjectPageLayout
-                id="ObjectPageLayout"
+                
                 showTitleInHeaderContent="true"
                 showEditHeaderButton="true"
                 editHeaderButtonPress="handleEditBtnPress"
@@ -140,7 +140,7 @@
                         </layout:VerticalLayout>
                         <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
                             <layout:VerticalLayout>
-                                <ObjectStatus id="experienceSet"
+                                <ObjectStatus
                                     icon="sap-icon://end-user-experience-monitoring"
                                     title="Experience"
                                     text="{viewModel>/experience}"
@@ -163,7 +163,7 @@
                 <obj:sections>
                     <obj:ObjectPageSection
                         titleUppercase="false"
-                        id="personal"
+                    
                         title="Objective"
                     >
                         <obj:ObjectPageSubSection
@@ -351,7 +351,7 @@ By combining these controls and features, the application delivers actionable in
                    <obj:ObjectPageSubSection title="Task" titleUppercase="false">
                     
                                 	<Carousel
-			id="carouselSample"
+			
 			ariaLabelledBy="carouselTitle"
 			height="auto" width="100%" arrowsPlacement="Content" backgroundDesign="Solid" showPageIndicator="false" 
 			pages="{TaskModel>/}">
@@ -442,7 +442,7 @@ By combining these controls and features, the application delivers actionable in
                     <ObjectStatus title="Year" text="2019-2020"></ObjectStatus>
                     <ObjectStatus title="Percentage" text="78.2"></ObjectStatus>
                     <ObjectStatus title="Location" text="Ahmedabad"></ObjectStatus>
-                    
+                   
                     </layout:VerticalLayout>
                     </obj:ObjectPageSubSection>
                     </obj:subSections>

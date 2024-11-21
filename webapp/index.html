@@ -24,6 +24,13 @@
         data-sap-ui-async="true"
         data-sap-ui-frameOptions="trusted"
     ></script>
+    <script>
+
+sap.ui.getCore().attachInit(function () {
+     sap.ui.core.BusyIndicator.show()
+    
+})
+    </script>
 </head>
 <body class="sapUiBody sapUiSizeCompact" id="content">
     <div

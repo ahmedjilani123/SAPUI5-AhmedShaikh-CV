@@ -20,14 +20,14 @@
                 close="HandleCloseFeedBackPress"
 			/>
            
-             <f:FlexibleColumnLayout id="flexID" layout="{ColumnLayout>/FLayout}" >
+             <f:FlexibleColumnLayout  layout="{ColumnLayout>/FLayout}" >
 
                 <f:beginColumnPages>
                  <core:Fragment  fragmentName="ascv.sap.portfolio.view.MainPage" type="XML"/>
                            <!-- <mvc:XMLView viewName="ascv.sap.portfolio.view.MainPage"/> -->
                 </f:beginColumnPages>
                 <f:midColumnPages>
-                    <Page id="midColumnPage" showHeader="false" >
+                    <Page  showHeader="false" >
                    
                 <content>
                   <core:Fragment  fragmentName="ascv.sap.portfolio.view.TaskDetail" type="XML"/>

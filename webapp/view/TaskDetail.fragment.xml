@@ -9,14 +9,14 @@
     xmlns:f="sap.f">
 
     <!-- Dynamic Header Title -->
-    <obj:ObjectPageDynamicHeaderTitle id="TaskDetail">
+    <obj:ObjectPageDynamicHeaderTitle >
         <!-- Navigation Actions -->
         <obj:navigationActions>
             <OverflowToolbarButton
                 type="Transparent"
                 icon="sap-icon://decline"
                 press="handleCloseSideScreenPre"
-                id="closeButton"
+            
                 tooltip="Close" />
         </obj:navigationActions>
 
@@ -60,7 +60,7 @@
 
     <!-- IconTabBar -->
     <IconTabBar
-        id="idIconTabBarMulti"
+    
         expanded="true"
         class="sapUiResponsiveContentPadding"
         items="{sideTaskModel>/Tabs}">

@@ -7,9 +7,9 @@ sap.ui.define([
     "use strict";
 
     return BaseController.extend("ascv.sap.portfolio.controller.View1", {
-        onInit() {
-            BusyIndicator.hide()
-        },
+        onInit() { 
+            BusyIndicator.hide() 
+    },
         onAfterRendering: function () {
             let oModel = this.getView().getModel("viewModel"),theme;
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
