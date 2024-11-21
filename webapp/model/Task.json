@@ -86,7 +86,7 @@
         ]
     },
     {
-        "Title": "Custom Fiori Launchpad",
+        "Title": "Custom Launchpad",
         "Image": "../Images/launchpad.png",
         "Url": "https://customfiorilaunchpad.netlify.app/",
         "Description": "Custom Fiori Launchpad is a tailored SAP Fiori/UI5 application that serves as a central hub for managing various custom applications, enabling efficient SAP workflow customization.",
