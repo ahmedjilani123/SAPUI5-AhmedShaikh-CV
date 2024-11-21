@@ -413,7 +413,7 @@ By combining these controls and features, the application delivers actionable in
                     <layout:VerticalLayout >
                     
                     
-                    <Title text="Bachelor of Technology in Computer Science"></Title>
+                    <Title text="Bachelor of Technology in Computer Science" wrapping="true"></Title>
                     <ObjectStatus title="College Name" text="Silver Oak University"></ObjectStatus>
                     <ObjectStatus title="Year" text="2022-2026"></ObjectStatus>
                     <ObjectStatus title="GPA" text="Present"></ObjectStatus>
