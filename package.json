@@ -8,10 +8,12 @@
     "sapui5"
   ],
   "main": "webapp/index.html",
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
   "devDependencies": {
-    "@ui5/cli": "^3.0.0",
-    "@sap/ux-ui5-tooling": "1"
+    "@sap/ux-ui5-tooling": "1",
+    "@ui5/cli": "^3.0.0"
   },
   "scripts": {
     "starts": "fiori run --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#ascvsapportfolio-display\"",

@@ -6,9 +6,7 @@ sap.ui.define([
     "use strict";
 
     return BaseController.extend("ascv.sap.portfolio.controller.View1", {
-        onInit() {
-          
-         },
+        onInit() {},
         onAfterRendering: function () {
             let oModel = this.getView().getModel("viewModel"),theme;
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -20,6 +18,7 @@ sap.ui.define([
             }
             sap.ui.getCore().applyTheme(theme);
             this.MessageStripCloseAction()
+            this.getExperience("2023-04-1")
         },
         SWitchThemePress: function (data) {
             var DesignModel = data.getParameter("state") ? "sap_horizon_dark" : "sap_horizon";
@@ -38,40 +37,64 @@ sap.ui.define([
         CancelFeedbackDialogPress:function(oEvent){
             oEvent.getSource().getParent().close();
         },
-        SubmitDataFeedbackToYouPress:function(oEvent){
-            debugger
+        SubmitDataFeedbackToYouPress:async function(oEvent){
+            
             var that =this;
             var InfoData = this.getOwnerComponent().getModel("FeedbackModel").getData();
             var InputSource =oEvent.getSource().getParent().getContent()[0].getContent();
             const Validate =this.ValidatedData(InfoData,InputSource);
             if(Validate){
-            var pa={
-                // addressLine1:InfoData.FeedBack,
-                password:InfoData.Name,
-                username:InfoData.Email
-            }
-                $.ajax({
-                    url:"https://api.freeapi.app/api/v1/users/login",
-                    method:"POST",
-                    data:JSON.stringify(pa),
-                    dataType:"json",
-                    contentType:"application/json",
-                    success:function(data){
-                        debugger;
-                        that.getOnwerComponent().getModel("FeedbackModel").setData({});
-                        that.getOnwerComponent().getModel("FeedbackModel").refresh(true);
-                        sap.m.MessageToast.show("Successfully Submitted Data");
-                        oEvent.getSource().getParent().close();
-                    },
-                    error:function(xhr, status, err){
-                        debugger
-                        sap.m.MessageToast.show("Error");
-                        oEvent.getSource().getParent().close();
-                    }
-                })
+            var pa={ 
+                "senderEmail":InfoData.Email,
+                 "senderFeedback":InfoData.FeedBack,
+                 "senderName":InfoData.Name
+                
+              }
+            $.ajax({
+                url: "https://email-feed-back-sapa.vercel.app/Email",
+                method: "POST",
+                data: JSON.stringify(pa),
+                dataType: "json",
+                contentType: "application/json",
+                success: function(data){
+                    console.log("Response Data:", data.Messsage);
+                    that.getOwnerComponent().getModel("FeedbackModel").setData({});
+                    that.getOwnerComponent().getModel("FeedbackModel").refresh(true);
+                    sap.m.MessageToast.show("Successfully Submitted Data");
+                    oEvent.getSource().getParent().close();
+                },
+                error:function(err){
+                    console.error("AJAX Error Details:", err);
+                    sap.m.MessageToast.show("Error occurred: " + (err.statusText || "Unknown Error"));
+                    oEvent.getSource().getParent().close();
+                }
+            });
+    
+           
+           
+            
             }
             
+        },
+        getExperience: function (startDate) {
+            var start = new Date(startDate); 
+            var now = new Date(); 
+            var years = now.getFullYear() - start.getFullYear(); 
+            var months = now.getMonth() - start.getMonth(); 
+            var days = now.getDate() - start.getDate(); 
+            if (months < 0) {
+                years--; 
+                months += 12;
+                        }
+            if (days < 0) {
+                months--; 
+                var previousMonth = new Date(now.getFullYear(), now.getMonth(), 0); 
+                days += previousMonth.getDate();
+            }
+            this.getOwnerComponent().getModel("viewModel").setProperty("/experience",`${years}Y ${months}M ${days}D`);
+            this.getOwnerComponent().getModel("viewModel").refresh(true);
         }
+        
       
     });
 });

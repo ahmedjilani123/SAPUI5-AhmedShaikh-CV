@@ -1,6 +1,6 @@
-  <mvc:View
+  <core:FragmentDefinition
+      xmlns:core="sap.ui.core" 
     xmlns:form="sap.ui.layout.form"
-     controllerName="ascv.sap.portfolio.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:obj="sap.uxap"
     xmlns:layout="sap.ui.layout"
@@ -70,7 +70,7 @@
                                 press="OpenLinkbuttonPress"
                             />
                              <Button
-                                type="Accept" fieldGroupIds="GitHub" 
+                                type="Critical" fieldGroupIds="GitHub" 
                                
                                 icon="../Images/github126.png"
                                 press="OpenLinkbuttonPress"
@@ -140,10 +140,10 @@
                         </layout:VerticalLayout>
                         <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
                             <layout:VerticalLayout>
-                                <ObjectStatus
+                                <ObjectStatus id="experienceSet"
                                     icon="sap-icon://end-user-experience-monitoring"
                                     title="Experience"
-                                    text=" 2 Year SAP Fiori/ui5"
+                                    text="{viewModel>/experience}"
                                 />
                                 <ObjectStatus
                                     icon="sap-icon://study-leave"
@@ -395,7 +395,7 @@ By combining these controls and features, the application delivers actionable in
    <HBox  width="100%" justifyContent="SpaceBetween" >
                <Button text="View Task Detail" type="Transparent" press="TaskDetailPress"></Button>
                 <ToolbarSpacer />
-                <Button  type="Transparent" text="open app"></Button>
+                <Button  type="Transparent" text="Open App" press="OpenAppPress"></Button>
             
                </HBox>
 
@@ -427,7 +427,7 @@ By combining these controls and features, the application delivers actionable in
                     
                   
                     <ObjectStatus title="School Name" text="Ankur School - Paldi"></ObjectStatus>
-                    <ObjectStatus title="Year" text="2020-2022"></ObjectStatus>
+                    <ObjectStatus title="Year" text="2021-2022"></ObjectStatus>
                     <ObjectStatus title="Percentage" text="58.5"></ObjectStatus>
                     <ObjectStatus title="Location" text="Ahmedabad"></ObjectStatus>
                     
@@ -452,4 +452,4 @@ By combining these controls and features, the application delivers actionable in
             </obj:ObjectPageLayout>
 
 
-            </mvc:View>
+            </core:FragmentDefinition>

@@ -28,6 +28,12 @@ sap.ui.define([
             model.refresh(true);
             this.CarouselFunctionModel(iPagesCount);
         },
+        OpenAppPress:function(data){
+            debugger
+            var TaskObject =data.getSource().getBindingContext("TaskModel").getObject();
+            MLibrary.URLHelper.redirect(TaskObject.Url, true);
+                  
+        },
         handleCloseSideScreenPre:function(data){
             var iPagesCount = 1;
 			if (Device.system.desktop) {
@@ -52,7 +58,7 @@ sap.ui.define([
                 if (messageStrip) {
                     messageStrip.close();
                 }
-            }, 9000);
+            }, 5000);
         },
         handleLinkObjectAttributePress : function (oEvent) {
             MLibrary.URLHelper.redirect(oEvent.getSource().getProperty("text"), true);

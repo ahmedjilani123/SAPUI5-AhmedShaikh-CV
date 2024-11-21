@@ -12,7 +12,7 @@
 </form:SimpleForm>
 </content>
 <beginButton>
-<Button text="Submit" type="Emphasized" press="SubmitDataFeedbackToYouPress"></Button>
+<Button text="Send" type="Emphasized" icon="sap-icon://paper-plane" press="SubmitDataFeedbackToYouPress"></Button>
 </beginButton>
 <endButton>
 <Button text="Cancel" type="Ghost" press="CancelFeedbackDialogPress"></Button>
