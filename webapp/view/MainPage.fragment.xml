@@ -218,11 +218,77 @@
                                                 class="sapUiSmallMargin"
                                             >
                                                 <Avatar
-                                                    src="../Images/almathon.png"
+                                                    src="../Images/nodejs.png"
                                                     press=".onTilePress"
                                                 />
                                                 <Link
-                                                    text="HTML"
+                                                    text="NodeJS"
+                                                    press=".onTilePress"
+                                                />
+                                            </VBox>
+                                        </f:content>
+                                    </f:Card>
+                                     <f:Card
+                                        height="100%"
+                                        width="100%" class="sapUiSmallMarginTop"
+                                    >
+                                        <f:content>
+                                            <VBox
+                                                alignItems="Center"
+                                                justifyContent="Center"
+                                                width="100%"
+                                                class="sapUiSmallMargin"
+                                            >
+                                                <Avatar
+                                                    src="../Images/javascript.png"
+                                                    press=".onTilePress"
+                                                />
+                                                <Link
+                                                    text="Javascript"
+                                                    press=".onTilePress"
+                                                />
+                                            </VBox>
+                                        </f:content>
+                                    </f:Card>
+                                     <f:Card
+                                        height="100%"
+                                        width="100%" class="sapUiSmallMarginTop"
+                                    >
+                                        <f:content>
+                                            <VBox
+                                                alignItems="Center"
+                                                justifyContent="Center"
+                                                width="100%"
+                                                class="sapUiSmallMargin"
+                                            >
+                                                <Avatar
+                                                    src="../Images/html.png"
+                                                    press=".onTilePress"
+                                                />
+                                                <Link
+                                                    text="HTML5"
+                                                    press=".onTilePress"
+                                                />
+                                            </VBox>
+                                        </f:content>
+                                    </f:Card>
+                                     <f:Card
+                                        height="100%"
+                                        width="100%" class="sapUiSmallMarginTop"
+                                    >
+                                        <f:content>
+                                            <VBox
+                                                alignItems="Center"
+                                                justifyContent="Center"
+                                                width="100%"
+                                                class="sapUiSmallMargin"
+                                            >
+                                                <Avatar
+                                                    src="../Images/reactjs.png"
+                                                    press=".onTilePress"
+                                                />
+                                                <Link
+                                                    text="React JS"
                                                     press=".onTilePress"
                                                 />
                                             </VBox>
