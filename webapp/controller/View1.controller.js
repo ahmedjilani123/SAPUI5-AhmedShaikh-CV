@@ -9,6 +9,7 @@ sap.ui.define([
     return BaseController.extend("ascv.sap.portfolio.controller.View1", {
         onInit() { 
             BusyIndicator.hide() 
+            document.addEventListener("selectionchange", this.handleSelectionChange.bind(this));
     },
         onAfterRendering: function () {
             let oModel = this.getView().getModel("viewModel"),theme;

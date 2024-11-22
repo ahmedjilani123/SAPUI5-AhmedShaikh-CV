@@ -115,6 +115,18 @@ sap.ui.define([
                 default:
                     return;
             }
-        }
+        },
+        handleSelectionChange: function () {
+            const selectedText = window.getSelection().toString().trim();
+            if (selectedText) {
+              window.speechSynthesis.cancel();
+              const utterance = new SpeechSynthesisUtterance(selectedText);
+              const voices = window.speechSynthesis.getVoices();
+          utterance.voice = voices[6];
+          utterance.pitch = 1; 
+          utterance.rate = 1;  
+        window.speechSynthesis.speak(utterance);
+            }
+          },
     });
   });
