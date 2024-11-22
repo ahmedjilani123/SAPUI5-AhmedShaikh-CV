@@ -32,9 +32,9 @@ sap.ui.define([
         },
         HandleCloseFeedBackPress:function(oEvent){
             
-             this.Dialog = new sap.ui.xmlfragment("ascv.sap.portfolio.Fragments.FeedBack",this);
-             this.getView().addDependent(this.Dialog);
-             this.Dialog.open();
+            //  this.Dialog = new sap.ui.xmlfragment("ascv.sap.portfolio.Fragments.FeedBack",this);
+            //  this.getView().addDependent(this.Dialog);
+            //  this.Dialog.open();
             
         },
         CancelFeedbackDialogPress:function(oEvent){

@@ -435,9 +435,6 @@ By combining these controls and features, the application delivers actionable in
                     </obj:ObjectPageSubSection>
                      <obj:ObjectPageSubSection title="Secondary School Certificate">
                     <layout:VerticalLayout >
-                    
-                    
-                
                     <ObjectStatus title="School Name" text="Ruth Memorial School - Vasna"></ObjectStatus>
                     <ObjectStatus title="Year" text="2019-2020"></ObjectStatus>
                     <ObjectStatus title="Percentage" text="78.2"></ObjectStatus>
@@ -451,5 +448,4 @@ By combining these controls and features, the application delivers actionable in
                 </obj:sections>
             </obj:ObjectPageLayout>
 
-
-            </core:FragmentDefinition>
+</core:FragmentDefinition>
