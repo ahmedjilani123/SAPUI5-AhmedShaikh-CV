@@ -105,16 +105,12 @@ sap.ui.define([
         OpenLinkbuttonPress:function(data){
             debugger
             var sText =data.getSource().getFieldGroupIds(); 
-            switch (sText[0]) {
-                case "LinkedIn":
-                    MLibrary.URLHelper.redirect("https://www.linkedin.com/in/ahmed-jilani-profile", true);
-                    break;
-                case "GitHub":
-                    MLibrary.URLHelper.redirect("https://github.com/ahmedjilani123?tab=repositories", true);
-                    break;
-                default:
-                    return;
+            let LinkName=this.getOwnerComponent().getModel("SocialMedia").getData();
+            LinkName.forEach(ele=>{
+            if(ele.name == sText[0]){
+                MLibrary.URLHelper.redirect(ele.url, true);
             }
+            })
         },
         handleSelectionChange: function () {
             const selectedText = window.getSelection().toString().trim();

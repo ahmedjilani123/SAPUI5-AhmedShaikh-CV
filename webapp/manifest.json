@@ -19,6 +19,14 @@
       "TaskModelData":{
         "uri": "./model/Task.json",
         "type": "JSON"
+      },
+      "SocialMediaData":{
+          "uri": "./model/SocialM.json",
+        "type": "JSON"
+      },
+      "ExperienceData":{
+          "uri": "./model/Experience.json",
+        "type": "JSON"
       }
     },
     "crossNavigation": {
@@ -88,6 +96,12 @@
       },
       "FeedbackModel": {
          "type": "sap.ui.model.json.JSONModel"
+      },
+      "SocialMedia":{
+          "dataSource": "SocialMediaData"
+      },
+      "ExperienceModel":{
+"dataSource": "ExperienceData"
       }
     },
     "resources": {
