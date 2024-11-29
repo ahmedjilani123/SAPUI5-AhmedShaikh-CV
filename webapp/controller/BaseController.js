@@ -1,8 +1,11 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/Device",
+    "sap/uxap/ObjectPageSubSection",
+    "sap/m/ObjectStatus",
+    "sap/ui/layout/VerticalLayout",
     "sap/m/library"
-  ], (Controller,Device,MLibrary) => {
+  ], (Controller,Device,ObjectPageSubSection,ObjectStatus,VerticalLayout,MLibrary) => {
     "use strict";
   
     return Controller.extend("ascv.sap.portfolio.controller.BaseController", {
@@ -124,5 +127,38 @@ sap.ui.define([
         window.speechSynthesis.speak(utterance);
             }
           },
+          ExperienceSectionBuild:function(){
+            var oObjectPageSection = this.byId("experienceSection");
+            var oModels = this.getView().getModel("ExperienceModel");
+            var aExperienceData = oModels.getProperty("/experience");
+            aExperienceData.forEach(function (experience) {
+                var oSubSection = new ObjectPageSubSection({
+                    title: experience.title
+                });
+                var oLayout = new VerticalLayout();
+                oLayout.addContent(new ObjectStatus({
+                    title: "Client Name",
+                    text: experience.clientName
+                }));
+                oLayout.addContent(new ObjectStatus({
+                    title: "Role",
+                    text: experience.role
+                }));
+                oLayout.addContent(new ObjectStatus({
+                    title: "Team Size",
+                    text: experience.teamSize
+                }));
+                oLayout.addContent(new ObjectStatus({
+                    title: "Environment",
+                    text: experience.environment
+                }));
+                oLayout.addContent(new ObjectStatus({
+                    title: "Project Information",
+                    text: experience.projectInfo
+                }));
+                oSubSection.addBlock(oLayout);
+                oObjectPageSection.addSubSection(oSubSection);
+            });
+          }
     });
   });

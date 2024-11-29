@@ -2,11 +2,8 @@ sap.ui.define([
     "./BaseController",
     'sap/ui/core/Fragment',
     "sap/m/MessageBox",
-    "sap/uxap/ObjectPageSubSection",
-    "sap/m/ObjectStatus",
-    "sap/ui/layout/VerticalLayout",
     'sap/ui/core/BusyIndicator'
-], (BaseController,Fragment,MessageBox,ObjectPageSubSection,ObjectStatus,VerticalLayout,BusyIndicator) => {
+], (BaseController,Fragment,MessageBox,BusyIndicator) => {
     "use strict";
 
     return BaseController.extend("ascv.sap.portfolio.controller.View1", {
@@ -25,43 +22,8 @@ sap.ui.define([
             }
             sap.ui.getCore().applyTheme(theme);
             this.MessageStripCloseAction()
-            this.getExperience("2023-04-1")
-            var oObjectPageSection = this.byId("experienceSection");
-            var oModels = this.getView().getModel("ExperienceModel");
-            var aExperienceData = oModels.getProperty("/experience");
-            aExperienceData.forEach(function (experience) {
-                var oSubSection = new ObjectPageSubSection({
-                    title: experience.title
-                });
-                var oLayout = new VerticalLayout();
-                oLayout.addContent(new ObjectStatus({
-                    title: "Client Name",
-                    text: experience.clientName
-                }));
-                oLayout.addContent(new ObjectStatus({
-                    title: "Role",
-                    text: experience.role
-                }));
-                oLayout.addContent(new ObjectStatus({
-                    title: "Team Size",
-                    text: experience.teamSize
-                }));
-                oLayout.addContent(new ObjectStatus({
-                    title: "Environment",
-                    text: experience.environment
-                }));
-                oLayout.addContent(new ObjectStatus({
-                    title: "Project Information",
-                    text: experience.projectInfo
-                }));
-                oSubSection.addBlock(oLayout);
-                oObjectPageSection.addSubSection(oSubSection);
-            });
-
-
-
-
-
+            this.getExperience("2023-04-1");
+            this.ExperienceSectionBuild();
         },
         SWitchThemePress: function (data) {
             var DesignModel = data.getParameter("state") ? "sap_horizon_dark" : "sap_horizon";
