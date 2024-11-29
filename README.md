@@ -1,4 +1,6 @@
-|**view my profile**<br> https://ahmedshaikhcv.netlify.app|
+| Description         | Link                                   |
+|---------------------|----------------------------------------|
+| View My Profile     | [ahmedshaikhcv.netlify.app](https://ahmedshaikhcv.netlify.app) |
 
 ## Application Details
 |               |
