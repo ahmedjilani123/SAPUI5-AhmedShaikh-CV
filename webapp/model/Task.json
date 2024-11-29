@@ -425,6 +425,86 @@
                 }
             }
         ]
+    },
+    {
+        "Title": "Profile Task",
+        "Image": "../Images/taskProfile.png",
+        "Url": "https://professional-life.vercel.app",
+        "Description": "A dynamic professional with expertise in software development, specializing in ReactJS. Passionate about crafting scalable and efficient solutions",
+        "Status": {
+            "State": "Complete",
+            "LastUpdated": "2024"
+        },
+        "Technology": ["JavaScript", "REACT JS", "Tailwind CSS", "HTML", "CSS", "JSON"],
+        "Tabs": [
+            {
+                "Key": "information",
+                "icon": "sap-icon://hint",
+                "Title": "Information",
+                "Content": {
+                    "Title": "Application Information",
+                    "ApplicationOverview": "Application Overview",
+                    "Describe": "Profile Resume formate application",
+                    "CoreData": [
+                        "ReactJs for creating the front-end interface.",
+                        "Vercel for cloud deployment and integration.",
+                        "JSON for local data storage.",
+                        "JSON services for demo configurations."
+                    ]
+                }
+            },
+            {
+                "Key": "functionality",
+                "Title": "Functionality",
+                "icon": "sap-icon://soccer",
+                "Content": {
+                    "Title": "Functionality",
+                    "ApplicationOverview": "Core Features",
+                    "Describe": "Experience and performance and analytics",
+                    "CoreData": [
+                        "Create a Own Profile ",
+                        "Experience Section for show project information",
+                        "About section show person information",
+                        "Technical section show technical information"
+                    ]
+                }
+            },
+            {
+                "Key": "problems",
+                "icon": "sap-icon://notes",
+                "Title": "Problems",
+                "Content": {
+                    "Title": "Challenges Encountered",
+                    "ApplicationOverview": "Challenges Encountered",
+                    "Describe": "The development of the Profile application faced a few challenges.",
+                    "CoreData": [
+                        "Managing large datasets and ensuring performance optimization.",
+                        "accuracy and synchronization with json data.",
+                        "Handling different data formats for each section type.",
+                        "Ensuring cross-browser and cross-device compatibility.",
+                        "Designing an intuitive user interface for complex data visualization."
+                    ]
+                }
+            },
+            {
+                "Key": "controls-used",
+                "icon": "sap-icon://my-view",
+                "Title": "Controls",
+                "Content": {
+                    "Title": "Controls",
+                    "Describe": "The Profile application utilizes various ReactJs controls to provide dynamic data visualization and a user-friendly experience.",
+                    "ApplicationOverview": "UI Controls Implemented",
+                    "CoreData": [
+                        " for displaying project, customer, plant, and sales-wise collection data.",
+                        "Button for exporting data to PDF.",
+                        "Input for applying form",
+                        "Div for displaying detailed experience data.",
+                        "Button for filtering data based on keywords.",
+                        "Tailwind CSS Grid for responsive layout design."
+                    ]
+                }
+            }
+        ]
     }
     
     
