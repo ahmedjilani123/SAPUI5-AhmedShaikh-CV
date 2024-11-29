@@ -74,7 +74,7 @@
                         type="Success"
                         text="CV"
                         icon="sap-icon://download"
-                        press="toggleFooter"
+                        press="DownloadCvPress"
                     />
                     <Switch
                         change="SWitchThemePress"

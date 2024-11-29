@@ -10,7 +10,17 @@ sap.ui.define([
         onInit() { 
             BusyIndicator.hide() 
             document.addEventListener("selectionchange", this.handleSelectionChange.bind(this));
+            
     },
+    DownloadCvPress:function(){
+        var sSource = sap.ui.require.toUrl("ascv/sap/portfolio/Profile/Ahmed_CV.pdf");
+        var oLink = document.createElement("a");
+        oLink.href = sSource;
+        oLink.download = "Ahmed_Shaikh_CV.pdf"; 
+        document.body.appendChild(oLink);
+        oLink.click();
+        document.body.removeChild(oLink);
+      },
         onAfterRendering: function () {
             let oModel = this.getView().getModel("viewModel"),theme;
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {

@@ -4,8 +4,9 @@ sap.ui.define([
     "sap/uxap/ObjectPageSubSection",
     "sap/m/ObjectStatus",
     "sap/ui/layout/VerticalLayout",
+    "sap/m/PDFViewer",
     "sap/m/library"
-  ], (Controller,Device,ObjectPageSubSection,ObjectStatus,VerticalLayout,MLibrary) => {
+  ], (Controller,Device,ObjectPageSubSection,ObjectStatus,VerticalLayout,PDFViewer,MLibrary) => {
     "use strict";
   
     return Controller.extend("ascv.sap.portfolio.controller.BaseController", {

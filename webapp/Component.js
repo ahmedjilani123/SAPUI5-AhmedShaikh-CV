@@ -34,6 +34,12 @@ sap.ui.define([
                 CarouselModel.setData({CountPage:iPagesCount});
                 CarouselModel.refresh(true);
             // enable routing
+            // var oSample2Model = new sap.ui.model.json.JSONModel({
+			// 	Source: sap.ui.require.toUrl("ascv/sap/portfolio/Ahmed_CV.pdf"),
+			// 	Preview: sap.ui.require.toUrl("ascv/sap/portfolio/Ahmed_CV.pdf")
+			// });
+
+			// this.setModel(oSample2Model,"pdf");
             this.getRouter().initialize();
         }
     });
