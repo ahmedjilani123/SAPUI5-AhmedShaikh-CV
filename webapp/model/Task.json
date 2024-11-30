@@ -430,7 +430,7 @@
         "Title": "Profile Task",
         "Image": "../Images/taskProfile.png",
         "Url": "https://professional-life.vercel.app",
-        "Description": "Profile is an application to view and manage your professional details, including experience, technical skills, education, and soft skills.",
+        "Description": "Profile is an application to manage professional details, showcasing experience, education, technical and soft skills, and certifications, offering a comprehensive career overview.",
         "Status": {
             "State": "Complete",
             "LastUpdated": "2024"
