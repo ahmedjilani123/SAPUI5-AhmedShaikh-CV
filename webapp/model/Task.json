@@ -506,7 +506,101 @@
                 }
             }
         ]
+    },
+    {
+        "Title": "Project Scope Manager",
+        "Image": "../Images/projectScope.png",
+        "Url": "https://projecttimelinesap.netlify.app",
+        "Description": "An app designed to streamline project management by enabling efficient configuration and management of project timelines, activities, and sub-activities, ensuring smooth workflows and enhanced productivity.",
+        "Status": {
+            "State": "Complete",
+            "LastUpdated": "22 Dec 2024"
+        },
+        "Technology": [
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "JSON",
+            "SAPUI5",
+            "OData",
+            "SQLite"
+        ],
+        "Tabs": [
+            {
+                "Key": "information",
+                "icon": "sap-icon://hint",
+                "Title": "Information",
+                "Content": {
+                    "Title": "Application Information",
+                    "ApplicationOverview": "Application Overview",
+                    "Describe": "A tool designed for project managers to define and track project timelines and detailed activities.",
+                    "CoreData": [
+                        "Provides a user-friendly interface for project configuration.",
+                        "Enables tracking of activities and sub-activities.",
+                        "Supports collaboration with cloud integration.",
+                        "Uses SQLite for storing local project configurations.",
+                        "Leverages SAP BTP for secure deployment and scalability."
+                    ]
+                }
+            },
+            {
+                "Key": "functionality",
+                "Title": "Functionality",
+                "icon": "sap-icon://soccer",
+                "Content": {
+                    "Title": "Functionality",
+                    "ApplicationOverview": "Core Features",
+                    "Describe": "The Project Scope Manager enables users to create, monitor, and update project configurations with a timeline and activity breakdown.",
+                    "CoreData": [
+                        "Define project start and end dates with a visual timeline.",
+                        "Add, edit, and delete activities within the project scope.",
+                        "Specify sub-activities for each activity with dependencies.",
+                        "Set milestones and deadlines for critical tasks.",
+                        "Track progress for activities and sub-activities in real-time.",
+                      
+                        "Customize views based on roles or individual preferences."
+                    ]
+                }
+            },
+            {
+                "Key": "problems",
+                "icon": "sap-icon://notes",
+                "Title": "Problems",
+                "Content": {
+                    "Title": "Challenges Encountered",
+                    "ApplicationOverview": "Challenges Encountered",
+                    "Describe": "Developing a comprehensive project management tool posed several challenges.",
+                    "CoreData": [
+                        "Creating an intuitive interface for timeline and activity configurations.",
+                        "Handling large data sets while maintaining performance.",
+                        "Implementing complex relationships between activities and sub-activities.",
+                        "Ensuring data synchronization between local and cloud databases.",
+                        "Supporting customization for diverse project management needs."
+                    ]
+                }
+            },
+            {
+                "Key": "controls-used",
+                "icon": "sap-icon://my-view",
+                "Title": "Controls",
+                "Content": {
+                    "Title": "Controls",
+                    "Describe": "The Project Scope Manager application utilizes advanced SAPUI5 controls for seamless interaction.",
+                    "ApplicationOverview": "UI Controls Implemented",
+                    "CoreData": [
+                        "sap.m.Table for listing activities and sub-activities.",
+                        "sap.m.PlanningCalendar for managing timelines.",
+                        "sap.m.Dialog for adding or editing activities.",
+                        "sap.m.Panel for grouping related activities.",
+                        "sap.m.Button for action execution (e.g., add, edit, delete).",
+                        "sap.m.Input for user inputs such as activity details and deadlines.",
+                        "sap.ui.layout.FixFlex for responsive layout design."
+                    ]
+                }
+            }
+        ]
     }
+    
     
     
     
