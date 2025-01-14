@@ -121,7 +121,11 @@
         "viewType": "XML",
         "path": "ascv.sap.portfolio.view",
         "async": true,
-        "viewPath": "ascv.sap.portfolio.view"
+        "clearControlAggregation": false,
+        "viewPath": "ascv.sap.portfolio.view",
+        "bypassed": {
+          "target":"notFound"
+        }
       },
       "routes": [
         {
@@ -136,7 +140,12 @@
         "TargetView1": {
           "id": "View1",
           "name": "View1"
-        }
+        },
+         "notFound": {
+        "viewName": "notFound",
+        "type": "XML",
+        "id": "notFound"
+    }
       }
     },
     "rootView": {

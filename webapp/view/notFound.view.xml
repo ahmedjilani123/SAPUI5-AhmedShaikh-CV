@@ -1,0 +1,13 @@
+<mvc:View
+	controllerName="ascv.sap.portfolio.controller.View1"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc" id="notFound">
+	<IllustratedMessage
+		illustrationType="sapIllus-PageNotFound"
+		title="Not Found"
+		description="Sorry, but the requested resource is not available. Please check the URL and try again.">
+		<additionalContent>
+			<Button text="Back To Profile" press=".onNavBack"></Button>
+		</additionalContent>
+	</IllustratedMessage>
+</mvc:View>

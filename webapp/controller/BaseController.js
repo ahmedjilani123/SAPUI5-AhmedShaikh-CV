@@ -160,6 +160,10 @@ sap.ui.define([
                 oSubSection.addBlock(oLayout);
                 oObjectPageSection.addSubSection(oSubSection);
             });
-          }
+          },
+          onNavBack(){
+            let router = this.getOwnerComponent().getRouter();
+            router.navTo("RouteView1");
+        }
     });
   });
