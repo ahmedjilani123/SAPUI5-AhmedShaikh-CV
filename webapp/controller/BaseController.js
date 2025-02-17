@@ -164,6 +164,18 @@ sap.ui.define([
           onNavBack(){
             let router = this.getOwnerComponent().getRouter();
             router.navTo("RouteView1");
+        },
+        AvatarPress:function(){
+             this.Dialog ??= new sap.ui.xmlfragment("ascv.sap.portfolio.Fragments.ProfileShow",this);
+             this.getView().addDependent(this.Dialog);
+              this.Dialog.open();
+        },
+        CloseProfilePress:function(oEvent){
+            oEvent.getSource().getParent().close();
+           
+        },
+        callPress:function(){
+            MLibrary.URLHelper.triggerTel("+91 6353038823")
         }
     });
   });

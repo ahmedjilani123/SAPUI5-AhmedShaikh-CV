@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ahmed Shaikh</title>
+    <link rel="icon" type="image/x-icon" href="./Images/profile.jpg">
     <style>
         html, body, body > div, #container, #container-uiarea {
             height: 100%;
@@ -31,6 +32,19 @@ sap.ui.getCore().attachInit(function () {
     
 })
     </script>
+      <script>
+        sap.ui.getCore().attachInit(function () {
+             sap.ui.core.BusyIndicator.show()
+            
+        })
+        document.addEventListener('contextmenu',
+        event => event.preventDefault());
+        document.addEventListener('keydown', function(event) {
+  if (event.key === 'F12') {
+    event.preventDefault();
+  }
+});
+            </script>
     <script src="libs/jspdf.umd.min.js"></script>
 	<script src="libs/jspdf.plugin.autotable.js"></script>
 </head>

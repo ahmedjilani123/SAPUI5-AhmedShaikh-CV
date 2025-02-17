@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+<Dialog title="Profile" titleAlignment="Center">
+<content>
+<FlexBox justifyContent="Center" alignItems="Center" alignContent="Center">
+<VBox justifyContent="Center" alignItems="Center" class="sapUiTinyMargin">
+
+<Avatar src="../Images/profile.jpg" displaySize="L"></Avatar>
+<Label design="Bold" text="Ahmed Shaikh"></Label>
+<Text text="SAP Fiori/UI5 Developer"></Text>
+</VBox>
+</FlexBox>
+<HBox justifyContent="Center">
+<Button icon="sap-icon://message-popup" type="Transparent" class="sapUiTinyMargin"></Button>
+<Button icon="sap-icon://call"  press="callPress" type="Transparent"  class="sapUiTinyMargin"></Button>
+<Button icon="sap-icon://email" type="Transparent"  class="sapUiTinyMargin"></Button>
+<Button icon="sap-icon://personnel-view" type="Transparent"  class="sapUiTinyMargin"></Button>
+</HBox>
+</content>
+<beginButton>
+<Button text="close" type="Reject" press="CloseProfilePress"></Button>
+</beginButton>
+</Dialog>
+</core:FragmentDefinition>

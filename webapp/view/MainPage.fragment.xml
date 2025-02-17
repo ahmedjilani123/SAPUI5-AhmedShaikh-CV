@@ -36,7 +36,7 @@
                     >
                         <Avatar
                             src="../Images/profile.jpg"
-                            class="sapUiTinyMarginEnd"
+                            class="sapUiTinyMarginEnd" active="true" press="AvatarPress"
                         />
                         <Title
                             text="Ahmed Shaikh"
@@ -92,7 +92,7 @@
                 <Avatar
                     class="sapUiSmallMarginEnd"
                     src="../Images/profile.jpg"
-                    displaySize="L"
+                    displaySize="L" active="true" showBorder="true" press="AvatarPress"
                 />
                 <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
                     <Text
@@ -176,7 +176,7 @@
             >
                 <obj:ObjectPageSubSection
                     title="Certification"
-                    titleUppercase="false"
+                    titleUppercase="false" 
                 >
                     <layout:Grid
                         containerQuery="true"
@@ -487,7 +487,20 @@
                                         alt="Task Image"
                                         width="100%"
                                         class="clickable-card sapUiTinyMarginBottom"
-                                    />
+                                    >
+                                    	<detailBox>
+						<LightBox>
+							<LightBoxItem
+								imageSrc="{= ${TaskModel>Image} ? ${TaskModel>Image} : '../Images/launchpad.png' }"
+								alt="Beamer"
+								title="{TaskModel>Title}"
+								 />
+									
+								
+						</LightBox>
+						
+					</detailBox>
+                                    </Image>
 
                                     <HBox
                                         alignItems="Center"
